@@ -6,6 +6,7 @@
 body {
     background-color: #8BA1BB;
     font-family: Arial;
+    padding: 0px;
 }
 .centre{
     text-align: center;
@@ -16,10 +17,10 @@ body {
 div.contenu {
     background-color: white;
     
-    margin: 60px 30px 60px 30px;
+    margin: 40px 5px 40px 5px;
     
-    padding: px 30px 30px 30px;
-    min-width: 420px;
+    padding: 0px 8px 10px 8px;
+    /*min-width: 420px;*/
     box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.15);
     /*max-width: 850px;
     
@@ -103,15 +104,16 @@ table.tableau{
     width: 100%; 
     color: white; 
     background-color: #6C829DC0;
+    height: 50px;
 }
 table.tableau td{
     text-align: center;
-    font-size: 16px;
+    font-size: 10px;
     vertical-align: top;
 }
 table.tableau th{
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 3px;
 }
@@ -119,7 +121,7 @@ table.tableau th{
 
 /*--------------liste ingrédient et préparation*/
 div.collone{
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 div.collone h2{
@@ -132,9 +134,8 @@ div.collone h2{
 
 
 div.collone1{
-    /*background-color: lightblue;*/
     display: inline-block;
-    margin-right: 10%;
+    margin-right: 0%;
 }
 div.data1 p{
     border: lightgray 1px solid;
@@ -142,11 +143,6 @@ div.data1 p{
     text-align: center;
     font-size: 16px;
     margin: 8px 0;
-}
-
-
-div.collone2{
-    float: right;
 }
 table.data_num2 p{
     background-color: #6C829D;
@@ -171,4 +167,52 @@ table.data_num2 td.prepa{
 }
 table.data_num2 tr{
     height: 50px;
+}
+
+
+/* --------------------------------------------styles pour ordinateur-----------------------------------*/
+@media only screen and (min-width: 768px){
+    div.contenu {
+        margin: 60px 10% 60px 10%;
+        padding: 0px 30px 30px 30px;
+        min-width: 420px;
+    }
+    div.image{
+        position: relative;
+        }
+        img.image{
+            display: block; 
+            max-height: 500px;
+            object-fit: cover;
+            min-height: 200px;
+            background-color: lightgray;/* pour quand l'image charge*/
+        }
+        table.tableau{
+            height: 80px;
+        }
+        table.tableau td{
+            font-size: 16px;
+        }
+        table.tableau th{
+            font-size: 20px;
+        }
+
+
+        div.collone{
+            width: 45%;
+        }
+        div.collone1{
+            margin-right: 10%;
+        }
+        div.collone2{
+            float: right;
+        }
+}
+@media only screen and (min-width: 900px){
+    div.contenu {
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 420px;
+        width: 646px;
+    }
 }
